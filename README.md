@@ -1,6 +1,7 @@
 # VariantQC
-Reyka Jayasinghe (rjayasin@genome.wustl.edu) and Steven Foltz (sfoltz@genome.wustl.edu)
 Variant quality checking scripts.
+Reyka Jayasinghe (rjayasin@genome.wustl.edu) and Steven Foltz (sfoltz@genome.wustl.edu).
+
 # How to run QC
 Main QC script is run using bsub_qc.sh, which initiates the main qc_pipeline.sh. The input to bsub_qc.sh is described in the file.
 
