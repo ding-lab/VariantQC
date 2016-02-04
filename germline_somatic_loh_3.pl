@@ -12,7 +12,7 @@ my $usage =<<USAGE;
     Where <complex> is the complex indel file for this sample
     Where <project> is a project identifier, useful for parsing sample IDs into tumor or normal
     Where <germline> <somatic> and <loh> are the output files for germline, somatic, and LOH mutations.
-    USER MUST DEFINE RULES FOR PARSING SAMPLE IDS INTO TUMOR OR NORMAL (see line 31)
+    USER MUST DEFINE RULES FOR PARSING SAMPLE IDS INTO TUMOR OR NORMAL (see line 37-38)
 USAGE
 
 my $file=$ARGV[0];
@@ -36,13 +36,13 @@ while(my $line=<COMPLEX>){
 	#USER MUST WRITE OWN RULES FOR DETERMINING THE TYPE OF EACH BAM (tumor or normal)
 	my $type1=""; #must be 'tumor' or 'normal', opposite of type2
 	my $type2=""; #must be 'tumor' or 'normal', opposite of type1
-    #CHECK TO SEE IF NO ENTERIES WERE PROVIDED FOR BAM INFORMATION
+    #CHECK TO SEE IF NO ENTERIES WERE PROVIDED FOR BAM INFORMATION - REFER TO ABOVE TWO LINES 
     if ($type1=~/^$/){
-        print STDERR "ERROR: User needs to define rules for parsing sample IDS into tumor and normal!! See germline_somatic_loh_3.pl Lines 34 and 35\n";
+        print STDERR "ERROR: User needs to define rules for parsing sample IDS into tumor and normal!! See germline_somatic_loh_3.pl Lines 37 and 38\n";
         die;
     }
     if ($type2=~/^$/){
-        print STDERR "ERROR: User needs to define rules for parsing sample IDS into tumor and normal!! See germline_somatic_loh_3.pl Lines 34 and 35\n";
+        print STDERR "ERROR: User needs to define rules for parsing sample IDS into tumor and normal!! See germline_somatic_loh_3.pl Lines 37 and 38\n";
         die;
     }	
 	#Set column 34 as the anchor column for later comparisons
