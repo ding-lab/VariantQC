@@ -1,10 +1,10 @@
 # VariantQC
+Reyka Jayasinghe (rjayasin@genome.wustl.edu) and Steven Foltz (sfoltz@genome.wustl.edu)
 Variant quality checking scripts.
 # How to run QC
 Main QC script is run using bsub_qc.sh, which initiates the main qc_pipeline.sh. The input to bsub_qc.sh is described in the file.
-Reyka Jayasinghe (rjayasin@genome.wustl.edu) and Steven Foltz (sfoltz@genome.wustl.edu)
 
-#The Variant QC script will go through the following steps:
+#Steps:
 1. Extract complex insertions and deletions from pindel output. 	
 2. Identify somatic, germline, and loss of heterozygosity(loh) events.
 3. Filter out low coverage sites (20 read min).
